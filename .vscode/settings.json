@@ -1,0 +1,11 @@
+{
+    "files.autoSave": "onFocusChange",
+    "python.formatting.provider": "black",
+    "editor.formatOnSave": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length",
+        "128"
+    ],
+    "python.defaultInterpreterPath": ".venv\\Scripts\\python3",
+}
