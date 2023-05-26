@@ -1,1 +1,1 @@
-from calc import add, sub, div, mul
+from .calc import add, div, mul, sub

@@ -7,7 +7,7 @@ def sub(arg1: int, arg2: int) -> int:
 
 
 def div(arg1: int, arg2: int) -> int:
-    return arg1 / arg2
+    return arg1 // arg2
 
 
 def mul(arg1: int, arg2: int) -> int:
