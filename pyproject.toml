@@ -18,7 +18,8 @@ notebook = "^6.5.4"
 # https://python-poetry.org/docs/dependency-specification#using-environment-markers
 torch = [
     { version = "^2.0.1", markers = "sys_platform != 'win32'" },
-    { url = "https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp311-cp311-win_amd64.whl", markers = "sys_platform == 'win32'" },
+    { version = "^2.0.1", markers = "sys_platform == 'win32'" },
+    # { url = "https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp311-cp311-win_amd64.whl", markers = "sys_platform == 'win32'" },
 ]
 sympy = "^1.12"
 
