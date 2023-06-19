@@ -14,9 +14,22 @@ test = "poetry run pytest"
 python = "^3.11"
 numpy = "^1.24.3"
 notebook = "^6.5.4"
-# https://zenn.dev/yag_ays/articles/a6c84622f558ee
-torch = { url = "https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp311-cp311-win_amd64.whl" }
 sympy = "^1.12"
+# https://zenn.dev/yag_ays/articles/a6c84622f558ee
+# https://python-poetry.org/docs/dependency-specification#using-environment-markers
+# https://github.com/python-poetry/poetry/issues/3959
+# https://github.com/python-poetry/poetry/issues/2765
+# https://github.com/nix-community/poetry2nix/issues/857
+# https://github.com/python-poetry/poetry/issues/6409#issuecomment-1568061569
+torch = [
+    { url = "https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp311-cp311-win_amd64.whl", markers = "sys_platform == 'win32'" },
+    { version = "^2.0.1", source = "pytorch-cpu", markers = "sys_platform != 'win32'" },
+]
+
+[[tool.poetry.source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"
