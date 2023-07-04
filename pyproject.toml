@@ -26,6 +26,8 @@ torch = [
     { version = "^2.0.1+cu118", source = "torch_cu118", markers = "sys_platform == 'win32'" },
     { version = "^2.0.1+cpu", source = "torch_cpu", markers = "sys_platform != 'win32'" },
 ]
+gym = "^0.26.2"
+pygame = "^2.5.0"
 
 [[tool.poetry.source]]
 name = "torch_cu118"
