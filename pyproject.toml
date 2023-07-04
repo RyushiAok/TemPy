@@ -21,13 +21,20 @@ sympy = "^1.12"
 # https://github.com/python-poetry/poetry/issues/2765
 # https://github.com/nix-community/poetry2nix/issues/857
 # https://github.com/python-poetry/poetry/issues/6409#issuecomment-1568061569
+# https://zenn.dev/zerebom/articles/b338784c8ac76a
 torch = [
-    { url = "https://download.pytorch.org/whl/cu118/torch-2.0.1%2Bcu118-cp311-cp311-win_amd64.whl", markers = "sys_platform == 'win32'" },
-    { version = "^2.0.1", source = "pytorch-cpu", markers = "sys_platform != 'win32'" },
+    { version = "^2.0.1+cu118", source = "torch_cu118", markers = "sys_platform == 'win32'" },
+    { version = "^2.0.1+cpu", source = "torch_cpu", markers = "sys_platform != 'win32'" },
 ]
 
 [[tool.poetry.source]]
-name = "pytorch-cpu"
+name = "torch_cu118"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+
+[[tool.poetry.source]]
+name = "torch_cpu"
 url = "https://download.pytorch.org/whl/cpu"
 priority = "explicit"
 
