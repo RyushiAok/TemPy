@@ -22,6 +22,7 @@ torch = [
 ]
 gym = "^0.26.2"
 pygame = "^2.5.0"
+python-dotenv = "^1.0.0"
 
 [[tool.poetry.source]]
 name = "torch_cu118"
