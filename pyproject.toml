@@ -12,15 +12,9 @@ test = "poetry run pytest"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-numpy = "^1.24.3"
+numpy = "^1.25.1"
 notebook = "^6.5.4"
 sympy = "^1.12"
-# https://zenn.dev/yag_ays/articles/a6c84622f558ee
-# https://python-poetry.org/docs/dependency-specification#using-environment-markers
-# https://github.com/python-poetry/poetry/issues/3959
-# https://github.com/python-poetry/poetry/issues/2765
-# https://github.com/nix-community/poetry2nix/issues/857
-# https://github.com/python-poetry/poetry/issues/6409#issuecomment-1568061569
 # https://zenn.dev/zerebom/articles/b338784c8ac76a
 torch = [
     { version = "^2.0.1+cu118", source = "torch_cu118", markers = "sys_platform == 'win32'" },
@@ -42,12 +36,12 @@ priority = "explicit"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.1"
-black = "^23.3.0"
+black = "^23.7.0"
 flake8 = "^6.0.0"
 pyproject-flake8 = "^6.0.0.post1"
 isort = "^5.12.0"
 flake8-isort = "^6.0.0"
-flake8-bugbear = "^23.5.9"
+flake8-bugbear = "^23.7.10"
 flake8-builtins = "^2.1.0"
 flake8-unused-arguments = "^0.0.13"
 flake8-pytest-style = "^1.7.2"
