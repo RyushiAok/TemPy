@@ -62,15 +62,15 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 
 [tool.black]
-line-length = 128
+line-length = 80
 
 [tool.isort]
 profile = "black"
-line_length = 128
+line_length = 80
 multi_line_output = 3
 
 [tool.flake8]
-max-line-length = 128
+max-line-length = 80
 extend-ignore = ["E203", "W503"]
 exclude = [".venv", ".git", "__pycache__"]
 max-complexity = 10
