@@ -12,8 +12,6 @@ This is a Python template project that contains the basic setup for clean develo
 - ci
 - task runner
 
-Welcome your Issue/PR ! 🙌
-
 ## Installation
 ```sh
 pyenv local 3.11.x
