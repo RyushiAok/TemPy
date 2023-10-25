@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "hello-python"
+name = "tempy"
 version = "0.1.0"
 description = ""
 authors = ["RyushiAok <55625375+RyushiAok@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{ include = "hello_python" }]
+packages = [{ include = "tempy" }]
 
 [tool.taskipy.tasks]
 main = "poetry run python src/main.py"
@@ -14,21 +14,19 @@ test = "poetry run pytest"
 python = "^3.11"
 numpy = "^1.25.1"
 notebook = "^6.5.4"
-sympy = "^1.12"
-# https://zenn.dev/zerebom/articles/b338784c8ac76a
 torch = [
-    { version = "^2.0.1+cu118", source = "torch_cu118", markers = "sys_platform == 'win32'" },
-    { version = "^2.0.1+cpu", source = "torch_cpu", markers = "sys_platform != 'win32'" },
+    { url = "https://download.pytorch.org/whl/cu121/torch-2.1.0%2Bcu121-cp311-cp311-win_amd64.whl", markers = "sys_platform == 'win32'" },
+    { version = "^2.1.0+cu121", source = "torch_cu121_linux", markers = "sys_platform == 'linux'" },
+    { version = "^2.1.0+cpu", source = "torch_cpu", markers = "sys_platform == 'darwin'" },
 ]
 gym = "^0.26.2"
 pygame = "^2.5.0"
 python-dotenv = "^1.0.0"
 
 [[tool.poetry.source]]
-name = "torch_cu118"
-url = "https://download.pytorch.org/whl/cu118"
+name = "torch_cu121_linux"
+url = "https://download.pytorch.org/whl/cu121"
 priority = "explicit"
-
 
 [[tool.poetry.source]]
 name = "torch_cpu"
@@ -40,6 +38,9 @@ pytest = "^7.3.1"
 pre-commit = "^3.3.3"
 taskipy = "^1.11.0"
 ruff = "^0.1.2"
+
+[tool.ruff]
+exclude = [".vscode"]
 
 [tool.pytest.ini_options]
 pythonpath = "src"
