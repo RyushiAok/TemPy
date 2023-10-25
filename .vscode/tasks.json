@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "poetry",
+      "args": ["run", "task", "main"],
+      "label": "run script"
+    },
+    {
+      "type": "shell",
+      "command": "poetry",
+      "args": ["run", "task", "test"],
+      "label": "poetry run task test",
+      "detail": "run tests"
+    }
+  ]
+}
