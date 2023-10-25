@@ -4,7 +4,7 @@
   
 This is a Python template project that contains the basic setup for clean development.
 - package manager: `poetry`
-- linter / formatter : `flake8`, `black`, `mypy`, `isort`
+- linter / formatter : `Ruff`
 - test: `pytest`
 - pre-commit
 - ci
