@@ -1,0 +1,7 @@
+[tasks.main]
+script_runner = "@shell"
+script = 'poetry run python src/main.py'
+
+[tasks.pytest]
+script_runner = "@shell"
+script = 'poetry run pytest --log-cli-level=DEBUG'

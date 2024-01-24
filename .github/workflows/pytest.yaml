@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.11"]
-        poetry-version: ["1.6.1"]
+        poetry-version: ["1.7.1"]
 
     runs-on: ubuntu-latest
 
